@@ -1,0 +1,20 @@
+● feather.service - feather virtual kubelet
+     Loaded: loaded (/lib/systemd/system/feather.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2024-03-20 13:55:27 CET; 14s ago
+   Main PID: 1126834 (fledge)
+      Tasks: 17
+     Memory: 21.2M
+        CPU: 189ms
+     CGroup: /system.slice/feather.service
+             └─1126834 /usr/bin/fledge --log-level=info --config=default.json --provider=backend
+
+mrt 20 13:55:28 edge-node fledge[1126834]: time="2024-03-20T13:55:28+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"kube-proxy-49h9r\", UID:\"656076b5-c93e-4491-9d0c-d2e98e255b0c\", APIVersion:\"v1\", ResourceVersion:\"2513334\", FieldPath:\"\"}): type: 'Normal' reason: 'ProviderCreateSuccess' Create pod in provider successfully" node=edge-node operatingSystem=linux provider=backend watchedNamespace=
+mrt 20 13:55:28 edge-node fledge[1126834]: time="2024-03-20T13:55:28+01:00" level=info msg=Ready node=edge-node operatingSystem=linux provider=backend watchedNamespace=
+mrt 20 13:55:29 edge-node fledge[1126834]: time="2024-03-20T13:55:29+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-bswqq_node-driver-registrar\""
+mrt 20 13:55:30 edge-node fledge[1126834]: time="2024-03-20T13:55:30+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-bswqq_vsphere-csi-node\""
+mrt 20 13:55:31 edge-node fledge[1126834]: time="2024-03-20T13:55:31+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-bswqq_liveness-probe\""
+mrt 20 13:55:31 edge-node fledge[1126834]: time="2024-03-20T13:55:31+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-bswqq_node-driver-registrar\""
+mrt 20 13:55:31 edge-node fledge[1126834]: time="2024-03-20T13:55:31+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-bswqq_vsphere-csi-node\""
+mrt 20 13:55:31 edge-node fledge[1126834]: time="2024-03-20T13:55:31+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-bswqq_liveness-probe\""
+mrt 20 13:55:31 edge-node fledge[1126834]: time="2024-03-20T13:55:31+01:00" level=info msg="Created pod in provider" addedViaRedirty=false delayedViaRateLimit=5ms key=kube-system/vsphere-csi-node-bswqq method=createOrUpdatePod name=vsphere-csi-node-bswqq namespace=kube-system node=edge-node operatingSystem=linux originallyAdded="2024-03-20 13:55:28.481715954 +0100 CET m=+0.994174206" phase=Pending plannedForWork="2024-03-20 13:55:28.486715954 +0100 CET m=+0.999174206" pod=vsphere-csi-node-bswqq provider=backend queue=syncPodsFromKubernetes reason= requeues=0 uid=3ed2f66a-657f-41bb-883f-baadb2dd7acd watchedNamespace= workerId=1
+mrt 20 13:55:31 edge-node fledge[1126834]: time="2024-03-20T13:55:31+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"vsphere-csi-node-bswqq\", UID:\"3ed2f66a-657f-41bb-883f-baadb2dd7acd\", APIVersion:\"v1\", ResourceVersion:\"2513990\", FieldPath:\"\"}): type: 'Normal' reason: 'ProviderCreateSuccess' Create pod in provider successfully" node=edge-node operatingSystem=linux provider=backend watchedNamespace=
