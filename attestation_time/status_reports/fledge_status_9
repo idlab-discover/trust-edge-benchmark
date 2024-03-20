@@ -1,0 +1,20 @@
+● feather.service - feather virtual kubelet
+     Loaded: loaded (/lib/systemd/system/feather.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-03-25 15:20:30 CET; 14s ago
+   Main PID: 40438 (fledge)
+      Tasks: 17
+     Memory: 29.5M
+        CPU: 653ms
+     CGroup: /system.slice/feather.service
+             └─40438 /usr/bin/fledge --log-level=info --config=default.json --provider=backend
+
+mrt 25 15:20:30 edge-node fledge[40438]: time="2024-03-25T15:20:30+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"calico-node-hmh52\", UID:\"0bef5e55-1bba-4a49-af9b-ba221f0d30f4\", APIVersion:\"v1\", ResourceVersion:\"3666207\", FieldPath:\"\"}): type: 'Warning' reason: 'OptionalConfigMapNotFound' configmap \"kubernetes-services-endpoint\" not found" node=edge-node operatingSystem=linux provider=backend watchedNamespace=
+mrt 25 15:20:30 edge-node fledge[40438]: time="2024-03-25T15:20:30+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"calico-node-hmh52\", UID:\"0bef5e55-1bba-4a49-af9b-ba221f0d30f4\", APIVersion:\"v1\", ResourceVersion:\"3666207\", FieldPath:\"\"}): type: 'Normal' reason: 'ProviderCreateSuccess' Create pod in provider successfully" node=edge-node operatingSystem=linux provider=backend watchedNamespace=
+mrt 25 15:20:31 edge-node fledge[40438]: time="2024-03-25T15:20:31+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-j7jl5_node-driver-registrar\""
+mrt 25 15:20:32 edge-node fledge[40438]: time="2024-03-25T15:20:32+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-j7jl5_vsphere-csi-node\""
+mrt 25 15:20:37 edge-node fledge[40438]: time="2024-03-25T15:20:37+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-j7jl5_liveness-probe\""
+mrt 25 15:20:37 edge-node fledge[40438]: time="2024-03-25T15:20:37+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-j7jl5_node-driver-registrar\""
+mrt 25 15:20:37 edge-node fledge[40438]: time="2024-03-25T15:20:37+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-j7jl5_vsphere-csi-node\""
+mrt 25 15:20:37 edge-node fledge[40438]: time="2024-03-25T15:20:37+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-j7jl5_liveness-probe\""
+mrt 25 15:20:37 edge-node fledge[40438]: time="2024-03-25T15:20:37+01:00" level=info msg="Created pod in provider" addedViaRedirty=false delayedViaRateLimit=5ms key=kube-system/vsphere-csi-node-j7jl5 method=createOrUpdatePod name=vsphere-csi-node-j7jl5 namespace=kube-system node=edge-node operatingSystem=linux originallyAdded="2024-03-25 15:20:30.770127802 +0100 CET m=+0.513910170" phase=Pending plannedForWork="2024-03-25 15:20:30.775127802 +0100 CET m=+0.518910170" pod=vsphere-csi-node-j7jl5 provider=backend queue=syncPodsFromKubernetes reason= requeues=0 uid=303b8a53-53e9-4604-b410-7cbfac2a45f2 watchedNamespace= workerId=0
+mrt 25 15:20:37 edge-node fledge[40438]: time="2024-03-25T15:20:37+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"vsphere-csi-node-j7jl5\", UID:\"303b8a53-53e9-4604-b410-7cbfac2a45f2\", APIVersion:\"v1\", ResourceVersion:\"3666202\", FieldPath:\"\"}): type: 'Normal' reason: 'ProviderCreateSuccess' Create pod in provider successfully" node=edge-node operatingSystem=linux provider=backend watchedNamespace=

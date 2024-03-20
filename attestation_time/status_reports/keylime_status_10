@@ -1,0 +1,20 @@
+● keylime_agent.service - The Keylime compute agent
+     Loaded: loaded (/lib/systemd/system/keylime_agent.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-03-25 15:21:19 CET; 25s ago
+   Main PID: 41122 (keylime_agent)
+      Tasks: 12 (limit: 18609)
+     Memory: 8.5M
+        CPU: 212ms
+     CGroup: /system.slice/keylime_agent.service
+             └─41122 /usr/bin/keylime_agent
+
+mrt 25 15:21:30 edge-node keylime_agent[41122]:  INFO  keylime_agent::payloads        > Executing payload script: /var/lib/keylime/secure/unzipped/autorun.sh
+mrt 25 15:21:30 edge-node sudo[41191]:  keylime : PWD=/var/lib/keylime/secure/unzipped ; USER=root ; COMMAND=/usr/bin/cp /var/lib/keylime/secure/unzipped/cert.pem /var/lib/keylime/secure/unzipped/key.pem /var/run/secrets/kubernetes.io/serviceaccount
+mrt 25 15:21:30 edge-node sudo[41191]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=129)
+mrt 25 15:21:30 edge-node sudo[41191]: pam_unix(sudo:session): session closed for user root
+mrt 25 15:21:30 edge-node sudo[41193]:  keylime : PWD=/var/lib/keylime/secure/unzipped ; USER=root ; COMMAND=/usr/bin/systemctl start feather
+mrt 25 15:21:30 edge-node sudo[41193]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=129)
+mrt 25 15:21:30 edge-node sudo[41193]: pam_unix(sudo:session): session closed for user root
+mrt 25 15:21:30 edge-node keylime_agent[41122]:  INFO  keylime_agent::payloads        > "/var/lib/keylime/secure/unzipped/autorun.sh" ran successfully
+mrt 25 15:21:30 edge-node keylime_agent[41122]:  INFO  keylime_agent::payloads        > Successfully executed encrypted payload
+mrt 25 15:21:30 edge-node keylime_agent[41122]:  ERROR keylime_agent::revocation      > Certicate not available

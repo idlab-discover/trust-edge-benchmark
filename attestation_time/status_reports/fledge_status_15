@@ -1,0 +1,20 @@
+● feather.service - feather virtual kubelet
+     Loaded: loaded (/lib/systemd/system/feather.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-03-25 15:25:59 CET; 14s ago
+   Main PID: 44687 (fledge)
+      Tasks: 18
+     Memory: 21.9M
+        CPU: 206ms
+     CGroup: /system.slice/feather.service
+             └─44687 /usr/bin/fledge --log-level=info --config=default.json --provider=backend
+
+mrt 25 15:25:59 edge-node fledge[44687]: time="2024-03-25T15:25:59+01:00" level=info msg="Created pod in provider" addedViaRedirty=false delayedViaRateLimit=5ms key=kube-system/calico-node-b6vxt method=createOrUpdatePod name=calico-node-b6vxt namespace=kube-system node=edge-node operatingSystem=linux originallyAdded="2024-03-25 15:25:59.502969827 +0100 CET m=+0.450629747" phase=Pending plannedForWork="2024-03-25 15:25:59.507969827 +0100 CET m=+0.455629747" pod=calico-node-b6vxt provider=backend queue=syncPodsFromKubernetes reason= requeues=0 uid=7c357814-232c-49c0-ab66-b611ffa3fd67 watchedNamespace= workerId=1
+mrt 25 15:25:59 edge-node fledge[44687]: time="2024-03-25T15:25:59+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"calico-node-b6vxt\", UID:\"7c357814-232c-49c0-ab66-b611ffa3fd67\", APIVersion:\"v1\", ResourceVersion:\"3667445\", FieldPath:\"\"}): type: 'Normal' reason: 'ProviderCreateSuccess' Create pod in provider successfully" node=edge-node operatingSystem=linux provider=backend watchedNamespace=
+mrt 25 15:26:00 edge-node fledge[44687]: time="2024-03-25T15:26:00+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-r77nz_node-driver-registrar\""
+mrt 25 15:26:01 edge-node fledge[44687]: time="2024-03-25T15:26:01+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-r77nz_vsphere-csi-node\""
+mrt 25 15:26:02 edge-node fledge[44687]: time="2024-03-25T15:26:02+01:00" level=info msg="creating instance \"kube-system_vsphere-csi-node-r77nz_liveness-probe\""
+mrt 25 15:26:02 edge-node fledge[44687]: time="2024-03-25T15:26:02+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-r77nz_node-driver-registrar\""
+mrt 25 15:26:02 edge-node fledge[44687]: time="2024-03-25T15:26:02+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-r77nz_vsphere-csi-node\""
+mrt 25 15:26:02 edge-node fledge[44687]: time="2024-03-25T15:26:02+01:00" level=info msg="starting instance \"kube-system_vsphere-csi-node-r77nz_liveness-probe\""
+mrt 25 15:26:02 edge-node fledge[44687]: time="2024-03-25T15:26:02+01:00" level=info msg="Created pod in provider" addedViaRedirty=false delayedViaRateLimit=5ms key=kube-system/vsphere-csi-node-r77nz method=createOrUpdatePod name=vsphere-csi-node-r77nz namespace=kube-system node=edge-node operatingSystem=linux originallyAdded="2024-03-25 15:25:59.476113522 +0100 CET m=+0.423773442" phase=Pending plannedForWork="2024-03-25 15:25:59.481113522 +0100 CET m=+0.428773442" pod=vsphere-csi-node-r77nz provider=backend queue=syncPodsFromKubernetes reason= requeues=0 uid=1aa54e65-2a10-483a-bfee-2632abf48dbe watchedNamespace= workerId=0
+mrt 25 15:26:02 edge-node fledge[44687]: time="2024-03-25T15:26:02+01:00" level=info msg="Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"kube-system\", Name:\"vsphere-csi-node-r77nz\", UID:\"1aa54e65-2a10-483a-bfee-2632abf48dbe\", APIVersion:\"v1\", ResourceVersion:\"3667436\", FieldPath:\"\"}): type: 'Normal' reason: 'ProviderCreateSuccess' Create pod in provider successfully" node=edge-node operatingSystem=linux provider=backend watchedNamespace=
